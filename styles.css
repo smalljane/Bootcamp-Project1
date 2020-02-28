@@ -89,7 +89,7 @@ header a{
 
 }
 /* styling main section of the website */
-
+/* general font styling for h3 & p */
 h3{
     font-size:2.5rem;;
     font-weight:medium;
@@ -104,12 +104,12 @@ p{
     font-weight:300;
     line-height:1.45rem;
 }
+/* about section styling */
 .about h3{
     margin:5rem 0;
     text-align:center;
 }
 
-/* why doesn't list work here */
 .about li{
     float:left;
     width:calc((100% - 70px) / 3);
@@ -127,21 +127,22 @@ p{
 /* section two styling */
 .blog{
     margin-top:5rem;
+    background-image: url(./one-magazine-assets/image-6.jpg);
+    background-size:contain;
+    background-repeat:no-repeat;
 }
-.blogImage1 {
-    float:left;
-    width:25%;
-}
+
 .blogCotent1{
-    float:left;
-    width:calc(75% - 35px);
-    margin-left:35px;
+    float:right;
+    width:75%;
+    padding-left:10rem;
+
 }
 .blogCotent1 h3{
     padding-bottom:0.5rem;
 }
 
-/* section three & four styling */
+/* section three & four general styling */
 .article1 h3,
 .article2 h3{
     padding-top:2rem;
@@ -150,36 +151,30 @@ p{
 /* section three styling */
 .article1{
     margin-top:5rem;
+    background-image: url(./one-magazine-assets/image-5.jpg);
+    background-size:50%;
+    background-repeat:no-repeat;
+    background-position: right;
 }
 
 .blogCotent2{
     float:left;
-    width:calc(50% - 14rem);
-    margin-left:8rem;
-    padding-right:1rem;
-}
-
-.blogImage2 {
-    float:right;
     width:50%;
+    padding-right:1rem;
+    margin:0;
 }
 
 /* section four styling */
 .article2{
-    clear: both;
-}
-.blogImage3{
-    float:left;
-    width:50%;
-    height:100%;
-    top:0;
-    left:0;
+    background-image: url(./one-magazine-assets/image-2.jpg);
+    background-size:50%;
+    background-repeat:no-repeat;
+    background-position: left;
 }
 
 .blogCotent3{
     float:right;
-    width:calc(50% - 14rem);
-    margin-right:8rem;
+    width:50%;
     padding-left:1rem;
 }
 
@@ -189,7 +184,7 @@ p{
     font-family:"Cormorant Garamond",serif;
     font-size:1rem;
     color:#FCFCFC;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.7rem;
     display:inline-block;
     margin-top:1.5rem;
 }
