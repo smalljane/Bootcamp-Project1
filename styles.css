@@ -5,15 +5,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
-
+/* general styling */
 html{
     font-size:125%;
 }
 
 body{
-    font-family:"Cormorant Garamond",serif;
-    
+    font-family:"Cormorant Garamond",serif;   
 }
+
 .wrapper{
     max-width:1280px;
     width:80%;
@@ -36,14 +36,24 @@ img{
 header{
     background-image: url(./one-magazine-assets/image-1.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     height:100vh;
-    color:#FCFCFC;
     text-transform: uppercase;
 }
 
-.logo{
+header h3, 
+header a,
+header h1,
+header i{
     color:#FCFCFC;
+}
+
+header h3,
+h1 span{
     font-style:italic;
+}
+
+header h3{
     float:left;
     width:60%;
     padding-top:1.5rem;
@@ -56,16 +66,16 @@ nav{
 }
 
 h1{
-    font-style:italic;
-    font-size:8rem;
+    font-weight:500;
+    font-size:6rem;
     clear:both;
     padding-top:7rem;
     line-height:6rem;
 }
 
-h2{
-    font-size:6rem;
-    padding-bottom:1.5rem;
+h1 span{
+    font-size:8rem;
+    display:block;
 }
 
 h1,h2{
@@ -75,7 +85,6 @@ h1,h2{
 
 header a{
     text-decoration:none;
-    color:#FCFCFC;
     font-size:0.9rem;
     font-family: 'Roboto',serif;
     padding-left:1.4rem;
@@ -91,8 +100,8 @@ header a{
 /* styling main section of the website */
 /* general font styling for h3 & p */
 h3{
-    font-size:2.5rem;;
-    font-weight:medium;
+    font-size:2.4rem;;
+    font-weight:600;
     text-transform:uppercase;
     color:#000000;
 }
@@ -135,17 +144,21 @@ p{
 .blogCotent1{
     float:right;
     width:75%;
-    padding-left:10rem;
+    padding-left:5rem;
 
 }
 .blogCotent1 h3{
     padding-bottom:0.5rem;
 }
 
+.blogCotent1 a{
+    margin-bottom:0;
+}
+
 /* section three & four general styling */
 .article1 h3,
 .article2 h3{
-    padding-top:2rem;
+    padding-top:1rem;
     padding-bottom: 1rem;
 }
 /* section three styling */
@@ -160,7 +173,7 @@ p{
 .blogCotent2{
     float:left;
     width:50%;
-    padding-right:1rem;
+    padding-right:2rem;
     margin:0;
 }
 
@@ -175,72 +188,88 @@ p{
 .blogCotent3{
     float:right;
     width:50%;
-    padding-left:1rem;
+    padding-left:2rem;
 }
 
 /* styling button anchor tag */
 .button{
     background-color:rgba(24, 51, 153, 0.78);
     font-family:"Cormorant Garamond",serif;
-    font-size:1rem;
+    font-size:0.9rem;
     color:#FCFCFC;
     padding: 0.8rem 1.7rem;
     display:inline-block;
-    margin-top:1.5rem;
+    margin-top:1rem;
+    margin-bottom:1.3rem;
 }
 
 
 /* 2nd navigation section of the page */
 .navigation2{
     background-image: url(./one-magazine-assets/one-magazine-footer.jpg);
+    background-size:cover;
     clear:both;
-    padding:5rem;
+    padding:5rem 4rem;
 }
+.navigation2 li,
+.navigation2 a{
+    color:#FCFCFC; 
+}
+
 .navigation2 li{
     float:left;
     width:calc(100% / 3);
     text-align:center;
-    color:#FCFCFC;
+    padding-right:1rem;
 }
 
 .navigation2 i{
-    font-size:4rem;
+    font-size:3rem;
     padding-bottom:1rem;
 }
 
 .navigation2 a{
-    color:#FCFCFC;
     text-transform: uppercase;
-    font-size:1.7rem;
+    font-size:1.6rem;
     display:block;
 }
 
 /* styling footer */
-footer{
+.footerMain{
     background-color: #E3E3E3;
-    padding:3rem;
+    padding:5rem 0;
 }
 
 h4{
-    font-size:1.5rem;
+    font-size:1.3rem;
+    font-weight:600;
     text-transform: uppercase;
 }
 .footerLeft{
     float:left;
     width:50%;
     padding-right:1rem;
+    line-height: 2rem;
+}
+.footerLeft p{
+    padding-bottom: 0.8rem;
 }
 .footerMid{
     float:left;
-    width:25%;
+    width:calc(40% - 3.5rem);
+    padding-left:3.5rem;
 }
-footer nav{
+
+.footerMid h4{
+    padding-bottom: 1rem;
+}
+.footerMain nav{
     float:right;
-    width:25%;
+    width:10%;
     padding:0;
 }
 
-footer a{
+.footerMain a{
     color:#000000;
     font-family: 'Roboto',serif;
     display:block;
@@ -269,11 +298,11 @@ button{
 }
 .copyRight{
     background-color: #ACACAC;
-    padding:0.9rem;
+    padding:0.6rem 0;
 }
 .copyRight p{
     text-align:center;
-    font-size:1.1rem;
+    font-size:1rem;
     font-weight:400;
 }
 
