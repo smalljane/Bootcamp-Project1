@@ -41,6 +41,14 @@ header{
     text-transform: uppercase;
 }
 
+.fa-bars {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    visibility: hidden;
+}
+
 header h3, 
 header a,
 header h1,
@@ -55,13 +63,11 @@ h1 span{
 
 header h3{
     float:left;
-    width:60%;
     padding-top:1.5rem;
 }
 
 nav{
     float:right;
-    width:30%;
     padding-top:2rem;
 }
 
@@ -82,17 +88,19 @@ h1,h2{
     font-weight:medium;
     text-align:center;
 }
-
-header a{
+header li{
+    display:inline-block;
+    padding-left:1.4rem;
+}
+header nav li a{
     text-decoration:none;
     font-size:0.9rem;
     font-family: 'Roboto',serif;
-    padding-left:1.4rem;
 }
 
 .socialMedia i{
     font-size:1.3rem;
-    line-height:2.3rem;
+    line-height:2.2rem;
     display:block;
     padding-left:95%;
 
@@ -136,22 +144,24 @@ p{
 /* section two styling */
 .blog{
     margin-top:5rem;
-    background-image: url(./one-magazine-assets/image-6.jpg);
+    /* background-image: url(./one-magazine-assets/image-6.jpg);
     background-size:contain;
-    background-repeat:no-repeat;
+    background-repeat:no-repeat; */
 }
-
-.blogCotent1{
-    float:right;
-    width:75%;
-    padding-left:5rem;
-
+.blogImage{
+    float:left;
+    width:25%;
 }
-.blogCotent1 h3{
+.blogContent1{
+    float:left;
+    width:calc(75% - 3rem);
+    margin-left:3rem;
+}
+.blogContent1 h3{
     padding-bottom:0.5rem;
 }
 
-.blogCotent1 a{
+.blogContent1 a{
     margin-bottom:0;
 }
 
@@ -161,16 +171,19 @@ p{
     padding-top:1rem;
     padding-bottom: 1rem;
 }
+.article1,
+.article2{
+    background-size:50%;
+    background-repeat:no-repeat;
+}
 /* section three styling */
 .article1{
     margin-top:5rem;
     background-image: url(./one-magazine-assets/image-5.jpg);
-    background-size:50%;
-    background-repeat:no-repeat;
     background-position: right;
 }
 
-.blogCotent2{
+.blogContent2{
     float:left;
     width:50%;
     padding-right:2rem;
@@ -180,12 +193,10 @@ p{
 /* section four styling */
 .article2{
     background-image: url(./one-magazine-assets/image-2.jpg);
-    background-size:50%;
-    background-repeat:no-repeat;
     background-position: left;
 }
 
-.blogCotent3{
+.blogContent3{
     float:right;
     width:50%;
     padding-left:2rem;
@@ -256,7 +267,7 @@ h4{
 }
 .footerMid{
     float:left;
-    width:calc(40% - 3.5rem);
+    width:40% - 3.5rem;
     padding-left:3.5rem;
 }
 
@@ -307,6 +318,271 @@ button{
 }
 
 /* Media Queries */
-/* @media (max-width:1500px){
+@media (max-width:1450px){
+    h3{
+        font-size:2rem;
+    }
+    p{
+        font-size:0.9rem;
+        line-height:1.3rem;
+    }
+}
 
-} */
+@media (max-width:1250px){
+    .socialMedia i{
+        padding-left:90%;
+    }
+    h3{
+        font-size:1.6rem;
+    }
+    .about h3{
+        margin:3rem 0;
+    }
+    .article1{
+        margin-top:3.6rem;
+    }
+    .navigation2{
+        padding:4rem 3rem;
+    }
+    .navigtion2 a{
+        font-size:1.3rem;
+    }
+    .navigation2 i{
+        font-size:2.2rem;
+    }
+    .footerMid{
+    padding-left:2.5rem;
+}
+}
+
+@media(max-width:1160px){
+    h1 span{
+        font-size:6.5rem;
+    }
+    h1{
+        font-size:4.5rem;
+    }
+
+    .blogImage,
+    .blogContent1{
+        float:none;  
+        width:100%;
+    }
+    /* reduce image size and center it */
+    .blogImage {
+        width:80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* center blog section's button */
+    .blog .buttonCenter{
+        text-align: center;
+    }
+
+    .blogContent1{
+        margin:2rem 0 0 0;
+    }
+
+    .blogContent1 h3,
+    .blogContent1 a{
+        text-align:center;
+    }
+
+    .navigation2{
+        padding:3rem 2rem;
+    }
+    .footerMain{
+        padding: 3rem 0;
+    }
+    .footerLeft{
+        float:none;
+        width:100%;
+        margin-bottom:1rem;
+    }
+    input[type="email"]{
+        width:auto;
+    }
+    .footerMid{
+        float:left;
+        width:60%;
+        padding-left:0;
+    }
+
+    .footerMain nav{
+        float:right;
+        width:40%;
+    }
+
+@media (max-width:1000px){
+    .buttonCenter{
+        text-align:center;
+    }
+    .blogContent2,
+    .blogContent3{
+        float:none;
+        width:100%;
+    }
+
+    .article1,
+    .article2{
+        background-size: contain;
+        background-position: center top;
+    }
+
+}
+
+@media (max-width:850px){
+    .article1,
+    .article2{
+        background-size:contain;
+        height:100%;
+        margin-bottom:2rem;
+    }
+    .blogContent2,
+    .blogContent3{
+        text-align:center;
+        float:none;
+        width:100%;
+        padding:0;
+    }
+    .navigation2{
+        font-size:0.5rem;
+        padding:2rem 1rem;
+    }
+
+    .navigation2 li{
+        float:none;
+        width:100%;
+        padding:2rem 0 0 0;
+    }
+    .navigation2 li:nth-child(1){
+        padding:0;
+    }
+
+}
+
+@media (max-width:650px){
+    /* change to mobile menu */
+    header nav ul{
+        height:0;
+        overflow:hidden;
+    }
+    .fa-bars{
+        visibility:visible;
+    }
+
+    /* hide logo and social media icons */
+    .socialMedia,
+    header h3{
+        height:0;
+        overflow:hidden;
+    }
+    /* reduce header font size */
+    h1{
+        font-size:4rem;
+        line-height:4rem;
+        padding-top:12rem;
+    }
+
+    h1 span{
+        font-size:5.7rem;
+    }
+
+    /* increase blog section's button size */
+    .blogContent1 .button{
+        padding: 1.4rem 2.1rem;
+    }
+
+    /* Displaying about section's image in a column */
+    .about h3,
+    .blogContent1 h3{
+        font-size:2rem;
+    }
+    .about li{
+        float:none;
+        margin-right:0;  
+        text-align:center;
+        width:100%;
+    }
+
+    .about img{
+        width:60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    /* reduce article section's title font size */
+    .article1 h3,
+    .article2 h3{
+        font-size:1.2rem;
+    }
+}
+
+@media(max-width:550px){
+    h1 span{
+        font-size:5.5rem;
+    }
+    h1{
+        font-size:3.8rem;
+    }
+    /* reduce font size in navigation2 */
+    .navigation2 a{
+        font-size:1.4rem;
+    }
+    footer p{
+        font-weight:400;
+    }
+    .footerLeft{
+        margin-bottom:2.5rem;
+    }
+    .footerLeft h4{
+        padding-bottom:0.6rem;
+    }
+    .footerLeft h4,
+    .footerLeft p{
+        text-align:center;
+    }
+
+    input[type = email]{
+        width:100%;
+        height:2.7rem;
+        margin-bottom:0.7rem;
+    }
+
+    button{
+        width:100%;
+        color:#FCFCFC;
+        font-size: 1rem;
+        height: 2.7rem;
+    }
+
+    .footerMid p{
+        font-size:0.7rem;
+    }
+    footer button{
+        font-family:'Roboto',serif;
+    }
+    .copyRight p{
+        font-size:0.8rem;
+    }
+
+}
+}
+
+@media (max-width:480px){
+    h1 span{
+        font-size:5rem;
+    }
+    h1{
+        font-size:3.2rem;
+    }
+    .about h3 {
+        margin: 2rem 0;
+    }
+    .about img:nth-last-child(){
+        margin-bottom:0;
+    }
+
+} 
