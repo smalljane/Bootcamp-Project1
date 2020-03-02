@@ -352,7 +352,7 @@ button{
     }
     .footerMid{
     padding-left:2.5rem;
-}
+    }
 }
 
 @media(max-width:1160px){
@@ -413,38 +413,33 @@ button{
         float:right;
         width:40%;
     }
-
+}
 @media (max-width:1000px){
     .buttonCenter{
         text-align:center;
     }
     .blogContent2,
     .blogContent3{
+        text-align:center;
+        padding:25rem 0 0 0;
         float:none;
         width:100%;
     }
-
-    .article1,
-    .article2{
-        background-size: contain;
-        background-position: center top;
+    .blogContent3 h3{
+        padding-top:3rem;
     }
-
-}
-
-@media (max-width:850px){
     .article1,
     .article2{
         background-size:contain;
-        height:100%;
+        background-position: top;
         margin-bottom:2rem;
     }
+}
+
+@media (max-width:850px){
     .blogContent2,
     .blogContent3{
-        text-align:center;
-        float:none;
-        width:100%;
-        padding:0;
+        padding:23rem 0 0 0;
     }
     .navigation2{
         font-size:0.5rem;
@@ -459,7 +454,6 @@ button{
     .navigation2 li:nth-child(1){
         padding:0;
     }
-
 }
 
 @media (max-width:650px){
@@ -508,15 +502,17 @@ button{
 
     .about img{
         width:60%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem auto;
     }
 
     /* reduce article section's title font size */
     .article1 h3,
     .article2 h3{
         font-size:1.2rem;
+    }
+    .blogContent2,
+    .blogContent3{
+        padding:18rem 0 0 0;
     }
 }
 
@@ -526,6 +522,10 @@ button{
     }
     h1{
         font-size:3.8rem;
+    }
+    .blogContent2,
+    .blogContent3{
+        padding:14rem 0 0 0;
     }
     /* reduce font size in navigation2 */
     .navigation2 a{
@@ -553,7 +553,6 @@ button{
 
     button{
         width:100%;
-        color:#FCFCFC;
         font-size: 1rem;
         height: 2.7rem;
     }
@@ -569,7 +568,7 @@ button{
     }
 
 }
-}
+
 
 @media (max-width:480px){
     h1 span{
@@ -581,8 +580,10 @@ button{
     .about h3 {
         margin: 2rem 0;
     }
-    .about img:nth-last-child(){
-        margin-bottom:0;
+
+    .blogContent2,
+    .blogContent3{
+        padding:12rem 0 0 0;
     }
 
 } 
